@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitPro - Creating Customized Fitness Plans</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 640 512'><path fill='%234facfe' d='M104 96H56c-13.3 0-24 10.7-24 24v104H8c-4.4 0-8 3.6-8 8v48c0 4.4 3.6 8 8 8h24v104c0 13.3 10.7 24 24 24h48c13.3 0 24-10.7 24-24V120c0-13.3-10.7-24-24-24zm528 128h-24V120c0-13.3-10.7-24-24-24h-48c-13.3 0-24 10.7-24 24v272c0 13.3 10.7 24 24 24h48c13.3 0 24-10.7 24-24V288h24c4.4 0 8-3.6 8-8v-48c0-4.4-3.6-8-8-8zM456 32h-48c-13.3 0-24 10.7-24 24v168H256V56c0-13.3-10.7-24-24-24h-48c-13.3 0-24 10.7-24 24v400c0 13.3 10.7 24 24 24h48c13.3 0 24-10.7 24-24V288h128v168c0 13.3 10.7 24 24 24h48c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24z'/></svg>">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="logo-icon"><i class="fas fa-brain"></i></span>
+                <span class="logo-text">FitPro</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#features" class="nav-link">Features</a></li>
+                <li><a href="#how-it-works" class="nav-link">How It Works</a></li>
+                <li><a href="#benefits" class="nav-link">Benefits</a></li>
+                <li><a href="#demo" class="nav-link">Demo</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="mobile-menu-toggle"><i class="fas fa-bars"></i></button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">Transform Your</span>
+                    <span class="title-line gradient-text">Fitness Journey</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Personalized workout plans powered by cutting-edge smart technology. 
+                    Tailored to your goals, fitness level, and lifestyle.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('contact')"><i class="fas fa-rocket"></i> Get Started</button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('demo')"><i class="fas fa-play-circle"></i> Watch Demo</button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="10000">0</span>
+                        <span class="stat-label">Active Users</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="50000">0</span>
+                        <span class="stat-label">Plans Generated</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="98">0</span>
+                        <span class="stat-label">% Satisfaction</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="floating-card card-1">
+                    <div class="card-icon"><i class="fas fa-dumbbell"></i></div>
+                    <div class="card-text">Strength Training</div>
+                </div>
+                <div class="floating-card card-2">
+                    <div class="card-icon"><i class="fas fa-running"></i></div>
+                    <div class="card-text">Cardio Workouts</div>
+                </div>
+                <div class="floating-card card-3">
+                    <div class="card-icon"><i class="fas fa-spa"></i></div>
+                    <div class="card-text">Flexibility & Yoga</div>
+                </div>
+                <div class="floating-card card-4">
+                    <div class="card-icon"><i class="fas fa-apple-alt"></i></div>
+                    <div class="card-text">Nutrition Plans</div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Powerful Features</h2>
+                <p class="section-subtitle">Everything you need for a personalized fitness experience</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-bullseye"></i></div>
+                    <h3 class="feature-title">Goal-Oriented Plans</h3>
+                    <p class="feature-description">Our system analyzes your fitness goals and creates customized workout routines to help you achieve them faster.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3 class="feature-title">Progress Tracking</h3>
+                    <p class="feature-description">Real-time analytics and insights to monitor your progress and adjust your plan dynamically.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-sync-alt"></i></div>
+                    <h3 class="feature-title">Adaptive Learning</h3>
+                    <p class="feature-description">Plans evolve with you. The system learns from your performance and adapts workouts accordingly.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-apple-alt"></i></div>
+                    <h3 class="feature-title">Nutrition Guidance</h3>
+                    <p class="feature-description">Get personalized meal plans and nutrition advice tailored to your dietary preferences and goals.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-clock"></i></div>
+                    <h3 class="feature-title">Flexible Scheduling</h3>
+                    <p class="feature-description">Workouts that fit your busy lifestyle. Train anytime, anywhere with on-demand plans.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fas fa-trophy"></i></div>
+                    <h3 class="feature-title">Achievement System</h3>
+                    <p class="feature-description">Stay motivated with gamified challenges, badges, and milestone celebrations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-subtitle">Get your personalized fitness plan in 3 simple steps</p>
+            </div>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Tell Us About You</h3>
+                        <p class="step-description">Share your fitness level, goals, preferences, and any limitations. Our system needs to understand you first.</p>
+                    </div>
+                    <div class="step-visual">
+                        <div class="visual-icon"><i class="fas fa-edit"></i></div>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3 class="step-title">We Create Your Plan</h3>
+                        <p class="step-description">Our advanced algorithms analyze your data and generate a completely personalized fitness and nutrition plan.</p>
+                    </div>
+                    <div class="step-visual">
+                        <div class="visual-icon"><i class="fas fa-robot"></i></div>
+                    </div>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Start Your Journey</h3>
+                        <p class="step-description">Follow your customized plan, track progress, and watch as the system adapts to help you reach your goals.</p>
+                    </div>
+                    <div class="step-visual">
+                        <div class="visual-icon"><i class="fas fa-rocket"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section id="benefits" class="benefits">
+        <div class="container">
+            <div class="benefits-content">
+                <div class="benefits-text">
+                    <h2 class="section-title">Why Choose Smart Fitness?</h2>
+                    <div class="benefit-list">
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-star"></i></div>
+                            <div class="benefit-text">
+                                <h4>Truly Personalized</h4>
+                                <p>No two plans are alike. Every workout is designed specifically for you.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-dollar-sign"></i></div>
+                            <div class="benefit-text">
+                                <h4>Cost-Effective</h4>
+                                <p>Get personal trainer quality guidance at a fraction of the cost.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-mobile-alt"></i></div>
+                            <div class="benefit-text">
+                                <h4>Always Available</h4>
+                                <p>24/7 access to your plans, progress tracking, and personalized recommendations.</p>
+                            </div>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon"><i class="fas fa-flask"></i></div>
+                            <div class="benefit-text">
+                                <h4>Science-Backed</h4>
+                                <p>Built on proven fitness principles and latest sports science research.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="benefits-visual">
+                    <div class="phone-mockup">
+                        <div class="phone-screen">
+                            <div class="app-preview">
+                                <div class="app-header">
+                                    <div class="app-title">Today's Workout</div>
+                                    <div class="app-date" id="current-date">Monday, Oct 8</div>
+                                </div>
+                                <div class="workout-card">
+                                    <div class="workout-title">Upper Body Strength</div>
+                                    <div class="workout-stats">
+                                        <span><i class="fas fa-clock"></i> 45 min</span>
+                                        <span><i class="fas fa-fire"></i> 350 cal</span>
+                                    </div>
+                                </div>
+                                <div class="progress-ring">
+                                    <svg class="progress-svg" viewBox="0 0 120 120">
+                                        <circle class="progress-bg" cx="60" cy="60" r="50"></circle>
+                                        <circle class="progress-bar" cx="60" cy="60" r="50"></circle>
+                                    </svg>
+                                    <div class="progress-text">75%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section id="demo" class="demo">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">See It In Action</h2>
+                <p class="section-subtitle">Experience the power of personalized fitness plans</p>
+            </div>
+            <div class="demo-container">
+                <div class="demo-input">
+                    <h3>Your Information</h3>
+                    <div class="input-group">
+                        <label>Fitness Goal</label>
+                        <select id="fitness-goal" class="demo-select">
+                            <option>Weight Loss</option>
+                            <option>Muscle Gain</option>
+                            <option>General Fitness</option>
+                            <option>Athletic Performance</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Fitness Level</label>
+                        <select id="fitness-level" class="demo-select">
+                            <option>Beginner</option>
+                            <option>Intermediate</option>
+                            <option>Advanced</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>Available Days Per Week</label>
+                        <select id="available-days" class="demo-select">
+                            <option>3 days</option>
+                            <option>4 days</option>
+                            <option>5 days</option>
+                            <option>6 days</option>
+                        </select>
+                    </div>
+                    <button class="btn btn-primary generate-btn">Generate My Plan</button>
+                </div>
+                <div class="demo-output">
+                    <div class="output-placeholder">
+                        <div class="placeholder-icon"><i class="fas fa-bullseye"></i></div>
+                        <p>Click "Generate My Plan" to see your personalized workout plan</p>
+                    </div>
+                    <div class="output-result" style="display: none;">
+                        <h3>Your Personalized Plan</h3>
+                        <div class="plan-week">
+                            <div class="plan-day">
+                                <div class="day-header">Monday</div>
+                                <div class="day-workout">Upper Body Strength</div>
+                                <div class="day-duration">45 minutes</div>
+                            </div>
+                            <div class="plan-day">
+                                <div class="day-header">Wednesday</div>
+                                <div class="day-workout">Cardio & Core</div>
+                                <div class="day-duration">40 minutes</div>
+                            </div>
+                            <div class="plan-day">
+                                <div class="day-header">Friday</div>
+                                <div class="day-workout">Lower Body Power</div>
+                                <div class="day-duration">50 minutes</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get Started Today</h2>
+                <p class="section-subtitle">Join thousands of users transforming their fitness journey</p>
+            </div>
+            <div class="contact-content">
+                <form class="contact-form">
+                    <div class="form-row">
+                        <input type="text" placeholder="Your Name" class="form-input">
+                        <input type="email" placeholder="Your Email" class="form-input">
+                    </div>
+                    <textarea placeholder="Tell us about your fitness goals..." class="form-textarea"></textarea>
+                    <button type="submit" class="btn btn-primary">Start Free Trial</button>
+                </form>
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fas fa-envelope"></i></div>
+                        <h4>Email Us</h4>
+                        <p>support@fitpro.com</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fas fa-comments"></i></div>
+                        <h4>Live Chat</h4>
+                        <p>Available 24/7</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fas fa-globe-americas"></i></div>
+                        <h4>Social Media</h4>
+                        <p>@fitpro</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-icon"><i class="fas fa-brain"></i></span>
+                        <span class="logo-text">FitPro</span>
+                    </div>
+                    <p>Revolutionizing fitness with smart technology</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Product</h4>
+                        <a href="#features" onclick="scrollToSection('features'); return false;">Features</a>
+                        <a href="#how-it-works" onclick="scrollToSection('how-it-works'); return false;">How It Works</a>
+                        <a href="#demo" onclick="scrollToSection('demo'); return false;">Demo</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Company</h4>
+                        <a href="about.html">About Us</a>
+                        <a href="careers.html">Careers</a>
+                        <a href="blog.html">Blog</a>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Support</h4>
+                        <a href="#contact" onclick="scrollToSection('contact'); return false;">Contact</a>
+                        <a href="faq.html">FAQ</a>
+                        <a href="privacy.html">Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FitPro. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
