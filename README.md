@@ -113,7 +113,7 @@
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/yourusername/fitpro-fitness-planner.git
+   git clone https://github.com/Boobalan2006/fitpro-fitness-planner.git
    cd fitpro-fitness-planner
    ```
 
